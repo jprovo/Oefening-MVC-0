@@ -62,8 +62,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oBl-Nc-cVH" id="Ueu-eb-Moc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Switch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-ba-TIU">
-                                                    <rect key="frame" x="274" y="13" width="53" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-ba-TIU">
+                                                    <rect key="frame" x="274.5" y="11.5" width="52.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="-634" y="531"/>
         </scene>
-        <!--Random-->
+        <!--Random View Controller-->
         <scene sceneID="Z2d-Aa-GGd">
             <objects>
-                <viewController title="Random" id="SuO-ey-mF4" customClass="RandomViewController" sceneMemberID="viewController">
+                <viewController id="SuO-ey-mF4" customClass="RandomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rpt-Wq-DF1"/>
                         <viewControllerLayoutGuide type="bottom" id="Mba-NQ-Vg9"/>
@@ -141,6 +141,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oly-Zq-ssI">
+                                <rect key="frame" x="236" y="220" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random letter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4q-1D-6oD">
                                 <rect key="frame" x="246" y="290" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -156,13 +162,10 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapButton:" destination="SuO-ey-mF4" eventType="touchUpInside" id="Ny9-GG-MKh"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oly-Zq-ssI">
-                                <rect key="frame" x="236" y="220" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -174,15 +177,19 @@
                             <constraint firstItem="t4q-1D-6oD" firstAttribute="top" secondItem="oly-Zq-ssI" secondAttribute="bottom" constant="50" id="li0-7W-D9f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="randomLetter" destination="t4q-1D-6oD" id="DcT-ja-0Jd"/>
+                        <outlet property="randomNumber" destination="oly-Zq-ssI" id="FFB-k2-lYZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haE-qc-LLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="203"/>
         </scene>
-        <!--Image-->
+        <!--Image View Controller-->
         <scene sceneID="beO-lY-DmJ">
             <objects>
-                <viewController title="Image" id="Hnh-Oq-oHJ" sceneMemberID="viewController">
+                <viewController id="Hnh-Oq-oHJ" customClass="ImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PNr-gw-WXj"/>
                         <viewControllerLayoutGuide type="bottom" id="urh-WS-nGq"/>
@@ -192,10 +199,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lcQ-yn-hWg">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" placeholder="YES" id="3tY-IS-2Sw"/>
-                                    <constraint firstAttribute="width" constant="100" placeholder="YES" id="GpQ-M9-PSM"/>
+                                    <constraint firstAttribute="height" constant="200" placeholder="YES" id="3tY-IS-2Sw"/>
+                                    <constraint firstAttribute="width" constant="200" placeholder="YES" id="GpQ-M9-PSM"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kop-DH-g6e">
@@ -222,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="899" y="961"/>
         </scene>
-        <!--Slider-->
+        <!--View Controller-->
         <scene sceneID="Wz9-ab-LTK">
             <objects>
-                <viewController title="Slider" id="0Rb-r0-CrR" sceneMemberID="viewController">
+                <viewController id="0Rb-r0-CrR" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="62Z-wJ-QaE"/>
                         <viewControllerLayoutGuide type="bottom" id="yUK-aX-7KF"/>
@@ -259,10 +266,10 @@
             </objects>
             <point key="canvasLocation" x="1701" y="961"/>
         </scene>
-        <!--Switch-->
+        <!--Switch View Controller-->
         <scene sceneID="r1X-k4-AMK">
             <objects>
-                <viewController title="Switch" id="pyg-MF-dhT" sceneMemberID="viewController">
+                <viewController id="pyg-MF-dhT" customClass="SwitchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zoe-iy-Uzg"/>
                         <viewControllerLayoutGuide type="bottom" id="htC-u7-sxP"/>

@@ -14,10 +14,6 @@
 
 @implementation SwitchViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    #warning - Every time the switch changes values, update the label to the switch's state.
-}
+#warning - Every time the switch changes values, update the label to the switch's state. You still need to create the property and IBAction.
 
 @end

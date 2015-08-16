@@ -10,13 +10,15 @@
 
 @interface ImageViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation ImageViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-#warning - Every time you press the button, select another image. Be sure to check out the UIImageView's scaling modes.
+- (IBAction)didTapButton:(UIButton *)button
+{
+    #warning - Every time you press the button, select another image. Be sure to check out the UIImageView's scaling modes. The UIImageView is `NOT` yet connected to a property and the UIButton is `NOT` yet connected to this IBAction.
 }
+
 @end

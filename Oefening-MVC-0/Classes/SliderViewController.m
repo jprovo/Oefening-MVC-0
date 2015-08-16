@@ -14,10 +14,6 @@
 
 @implementation SliderViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    #warning - Every time the slider changes values, update the label to the slider's value.
-}
+#warning - Every time the slider changes values, update the label to the slider's value. You still need to create the property and IBAction.
 
 @end
