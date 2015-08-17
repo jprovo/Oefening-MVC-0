@@ -99,6 +99,27 @@
                                             <segue destination="0Rb-r0-CrR" kind="show" id="S6F-1c-0eX"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="64e-hj-UU8">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="64e-hj-UU8" id="SyY-qd-7V7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqm-hA-xVj">
+                                                    <rect key="frame" x="280" y="11.5" width="40" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Dqm-hA-xVj" secondAttribute="centerY" id="cIg-fc-NJ2"/>
+                                                <constraint firstAttribute="centerX" secondItem="Dqm-hA-xVj" secondAttribute="centerX" id="tDF-hR-21A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bea-w7-Qyl" kind="show" id="gyT-4b-3Ix"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -228,6 +249,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ytj-7y-Kx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="961"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MM8-ii-LBv">
+            <objects>
+                <viewController id="bea-w7-Qyl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jaY-D3-pOy"/>
+                        <viewControllerLayoutGuide type="bottom" id="k95-WR-7PQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YwM-Ii-tGd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRm-br-Nec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="1703"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Wz9-ab-LTK">
