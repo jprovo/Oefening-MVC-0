@@ -10,10 +10,15 @@
 
 @interface SliderViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation SliderViewController
 
-#warning - Every time the slider changes values, update the label to the slider's value. You still need to create the property and IBAction.
+- (IBAction)didChangeValueOfSlider:(UISlider *)slider
+{
+    self.label.text = [NSString stringWithFormat:@"%d", (int)slider.value];
+}
 
 @end

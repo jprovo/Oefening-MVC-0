@@ -11,6 +11,7 @@
 @interface ImageViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (assign, nonatomic) NSInteger imageIndex;
 
 @end
 
@@ -18,7 +19,11 @@
 
 - (IBAction)didTapButton:(UIButton *)button
 {
-    #warning - Every time you press the button, select another image. Be sure to check out the UIImageView's scaling modes. The UIImageView is `NOT` yet connected to a property and the UIButton is `NOT` yet connected to this IBAction.
+    NSArray *imageNames = @[ @"meme-01", @"meme-02", @"meme-03", @"meme-04", @"meme-05" ];
+    self.imageIndex = (self.imageIndex + 1) % imageNames.count;
+    NSString *imageName = [imageNames objectAtIndex:self.imageIndex];
+    UIImage *image = [UIImage imageNamed:imageName];
+    self.imageView.image = image;
 }
 
 @end

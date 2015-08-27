@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABCB1EB91B8EE99600C556B8 /* ExtraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCB1EB81B8EE99600C556B8 /* ExtraViewController.m */; };
 		ABCCB7FB1B7E00BE00E0C7E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCB7FA1B7E00BE00E0C7E9 /* main.m */; };
 		ABCCB7FE1B7E00BE00E0C7E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCB7FD1B7E00BE00E0C7E9 /* AppDelegate.m */; };
 		ABCCB8041B7E00BE00E0C7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCCB8021B7E00BE00E0C7E9 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABCB1EB71B8EE99600C556B8 /* ExtraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtraViewController.h; path = Classes/ExtraViewController.h; sourceTree = "<group>"; };
+		ABCB1EB81B8EE99600C556B8 /* ExtraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExtraViewController.m; path = Classes/ExtraViewController.m; sourceTree = "<group>"; };
 		ABCCB7F51B7E00BE00E0C7E9 /* Oefening-MVC-0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oefening-MVC-0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCCB7F91B7E00BE00E0C7E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABCCB7FA1B7E00BE00E0C7E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				ABCCB82E1B7E1E7200E0C7E9 /* SwitchViewController.m */,
 				ABCCB8301B7E1E7B00E0C7E9 /* SliderViewController.h */,
 				ABCCB8311B7E1E7B00E0C7E9 /* SliderViewController.m */,
+				ABCB1EB71B8EE99600C556B8 /* ExtraViewController.h */,
+				ABCB1EB81B8EE99600C556B8 /* ExtraViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				ABCCB8291B7E1C6A00E0C7E9 /* RandomViewController.m in Sources */,
 				ABCCB82C1B7E1D4300E0C7E9 /* ImageViewController.m in Sources */,
 				ABCCB82F1B7E1E7200E0C7E9 /* SwitchViewController.m in Sources */,
+				ABCB1EB91B8EE99600C556B8 /* ExtraViewController.m in Sources */,
 				ABCCB7FB1B7E00BE00E0C7E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +488,7 @@
 				ABCCB81A1B7E00BE00E0C7E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABCCB81B1B7E00BE00E0C7E9 /* Build configuration list for PBXNativeTarget "Oefening-MVC-0Tests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +497,7 @@
 				ABCCB81D1B7E00BE00E0C7E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

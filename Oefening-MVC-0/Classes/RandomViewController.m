@@ -19,12 +19,15 @@
 
 - (IBAction)didTapButton:(UIButton *)button
 {
-#warning - Every time you press the button, a random number & letter should appear on the screen. The UILabels are already connected to a property and the UIButton is already connected to this IBAction.
+    self.randomNumber.text = [NSString stringWithFormat:@"%lu", (unsigned long)[self generateRandomNumber]];
+    self.randomLetter.text = [self generateRandomLetter];
 }
 
 - (NSString *)generateRandomLetter
 {
-    return @"?";
+    NSArray *alphabat = @[ @"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j", @"k", @"l", @"m", @"n", @"o", @"p", @"q", @"r", @"s", @"t", @"u", @"v", @"w", @"x", @"y", @"z" ];
+    NSInteger randomIndex = [self generateRandomNumberBetween0And:alphabat.count];
+    return [alphabat objectAtIndex:randomIndex];
 }
 
 /**
@@ -44,9 +47,9 @@
  E.g.: If `number` is 10, the number returned will be in interval [0 - 9].
  
 */
-- (NSUInteger)generateRandomNumberBetween0And:(u_int32_t)number
+- (NSUInteger)generateRandomNumberBetween0And:(NSInteger)number
 {
-    return arc4random_uniform(number);
+    return arc4random_uniform((unsigned int)number);
 }
 
 @end

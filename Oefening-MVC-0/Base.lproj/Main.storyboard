@@ -62,8 +62,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oBl-Nc-cVH" id="Ueu-eb-Moc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Switch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-ba-TIU">
-                                                    <rect key="frame" x="275" y="12" width="53" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-ba-TIU">
+                                                    <rect key="frame" x="274" y="11.5" width="52.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -235,6 +235,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapButton:" destination="Hnh-Oq-oHJ" eventType="touchUpInside" id="O5s-FU-KJR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,15 +248,18 @@
                             <constraint firstAttribute="centerX" secondItem="lcQ-yn-hWg" secondAttribute="centerX" id="tMw-L5-HIn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="lcQ-yn-hWg" id="nGx-VE-3Ma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ytj-7y-Kx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="961"/>
         </scene>
-        <!--View Controller-->
+        <!--Extra View Controller-->
         <scene sceneID="MM8-ii-LBv">
             <objects>
-                <viewController id="bea-w7-Qyl" sceneMemberID="viewController">
+                <viewController id="bea-w7-Qyl" customClass="ExtraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jaY-D3-pOy"/>
                         <viewControllerLayoutGuide type="bottom" id="k95-WR-7PQ"/>
@@ -261,17 +267,62 @@
                     <view key="view" contentMode="scaleToFill" id="YwM-Ii-tGd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ud6-9i-cBA">
+                                <rect key="frame" x="238" y="114" width="123" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeValueOfSegmentedControl:" destination="bea-w7-Qyl" eventType="valueChanged" id="w5B-8w-hKB"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhr-aO-WbO">
+                                <rect key="frame" x="295" y="290" width="10" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wUb-q1-ip4">
+                                <rect key="frame" x="140" y="388" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="462350786.44689101">
+                                    <!--2015-08-27 06:46:26 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="didChangeValueOfDatePicker:" destination="bea-w7-Qyl" eventType="valueChanged" id="c2J-sH-LOF"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Ud6-9i-cBA" secondAttribute="centerX" id="DaS-aM-lBF"/>
+                            <constraint firstItem="wUb-q1-ip4" firstAttribute="top" secondItem="Ud6-9i-cBA" secondAttribute="bottom" constant="50" id="G8X-DS-rrl"/>
+                            <constraint firstAttribute="centerY" secondItem="rhr-aO-WbO" secondAttribute="centerY" id="PNT-ZC-qvt"/>
+                            <constraint firstItem="k95-WR-7PQ" firstAttribute="top" secondItem="wUb-q1-ip4" secondAttribute="bottom" constant="50" id="RKN-RM-ZvY"/>
+                            <constraint firstAttribute="centerX" secondItem="wUb-q1-ip4" secondAttribute="centerX" id="WFY-P1-Snz"/>
+                            <constraint firstAttribute="centerX" secondItem="rhr-aO-WbO" secondAttribute="centerX" id="XsM-bZ-3nb"/>
+                            <constraint firstItem="Ud6-9i-cBA" firstAttribute="top" secondItem="jaY-D3-pOy" secondAttribute="bottom" constant="50" id="o3q-ra-o3v"/>
+                            <constraint firstAttribute="centerX" secondItem="rhr-aO-WbO" secondAttribute="centerX" id="qTP-4n-iqg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G8X-DS-rrl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="rhr-aO-WbO" id="2QV-fl-2fI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRm-br-Nec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="1703"/>
         </scene>
-        <!--View Controller-->
+        <!--Slider View Controller-->
         <scene sceneID="Wz9-ab-LTK">
             <objects>
-                <viewController id="0Rb-r0-CrR" sceneMemberID="viewController">
+                <viewController id="0Rb-r0-CrR" customClass="SliderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="62Z-wJ-QaE"/>
                         <viewControllerLayoutGuide type="bottom" id="yUK-aX-7KF"/>
@@ -280,14 +331,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac3-5w-7ag">
-                                <rect key="frame" x="280" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac3-5w-7ag">
+                                <rect key="frame" x="290.5" y="290.5" width="19.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-Rn-aL9">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-Rn-aL9">
                                 <rect key="frame" x="48" y="520" width="504" height="31"/>
+                                <connections>
+                                    <action selector="didChangeValueOfSlider:" destination="0Rb-r0-CrR" eventType="valueChanged" id="pOX-I9-mug"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,6 +354,9 @@
                             <constraint firstAttribute="centerX" secondItem="Iy4-Rn-aL9" secondAttribute="centerX" id="zgC-nP-ZVS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="Ac3-5w-7ag" id="nBq-6T-50g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VV0-ec-4kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -325,6 +382,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aew-IG-xvd">
                                 <rect key="frame" x="276" y="519" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didChangeValueOfSwitch:" destination="pyg-MF-dhT" eventType="valueChanged" id="6Zp-MJ-htJ"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -335,6 +395,9 @@
                             <constraint firstItem="htC-u7-sxP" firstAttribute="top" secondItem="Aew-IG-xvd" secondAttribute="bottom" constant="50" id="qSh-o6-odh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="emw-pX-ugD" id="l2D-AF-zEP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPU-EF-Rxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,10 +10,19 @@
 
 @interface SwitchViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation SwitchViewController
 
-#warning - Every time the switch changes values, update the label to the switch's state. You still need to create the property and IBAction.
+- (IBAction)didChangeValueOfSwitch:(UISwitch *)switchControl
+{
+    if (switchControl.isOn) {
+        self.label.text = @"On :)";
+    } else {
+        self.label.text = @"Off :(";
+    }
+}
 
 @end
