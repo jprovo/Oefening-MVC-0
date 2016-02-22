@@ -1,5 +1,11 @@
-# Oefening-MVC-0
-## Opgaves
-1. De opgaves staan in het project als warnings. Zoek de opgaves, los ze en op en verwijder de warnings als je klaar bent.
-2. _Gebruik de lege UIViewController in het storyboard en voeg een UISegmentedControl toe, laat een UILabel veranderen afhankelijk van de waarde van de segmented control._
-3. _Gebruik de lege UIViewController in het storyboard en voeg een UIDatePicker toe, laat een UILabel de gekozen datum weergeven._
+# Exercise-MVC-0
+
+In this exercise you will explore Xcode, learn Objective-C and work with the MVC design pattern.
+
+## Tasks
+1. The tasks can be found throughout the project as warnings. Find all tasks, solve them and remove the warnings when solved.
+2. _Use the empty UIViewController in the storyboard and add a UISegmentedControl, let a UILabel change depending on the value of the segmented control._
+3. _Use the empty UIViewController in the storyboard and add a UIDatePicker, let a UILabel display the selected date._
+
+## Solutions
+The solutions are available in the **oplossing** branch of this repository.
